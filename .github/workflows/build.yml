@@ -3,7 +3,7 @@ name: Build APK
 on:
   push:
     branches:
-      - main  # یا اسم برنچ خودت مثل master
+      - main  # یا نام برنچ خودت (مثلاً master)
   workflow_dispatch:
 
 jobs:
@@ -28,6 +28,10 @@ jobs:
           openjdk-11-jdk
         pip install --upgrade pip
         pip install cython buildozer
+
+    - name: Accept Android SDK Licenses
+      run: |
+        mkdir -p ~/.android && echo '24333f8a63b6825ea9c5514f83c2829b004d1fee' > ~/.android/repositories.cfg
 
     - name: Initialize buildozer (if needed)
       run: |
