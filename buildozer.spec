@@ -47,8 +47,8 @@ requirements = python3,kivy==2.3.1,matplotlib
 #presplash.filename = %(source.dir)s/data/presplash.png
 
 # (str) Icon of the application
-#icon.filename = %(source.dir)s/data/icon.png
-icon = icon.png
+icon.filename = icon.png
+
 # (list) Supported orientations
 # Valid options are: landscape, portrait, portrait-reverse or landscape-reverse
 orientation = portrait
